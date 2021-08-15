@@ -2,12 +2,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<!-- ============ import common css ========== -->
-<link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | relURL }}"/>
-<link rel="stylesheet" href="{{ "/css/layouts/main.css" | relURL }}"/>
-<link rel="stylesheet" href="{{ "/css/navigators/navbar.css" | relURL }}"/>
-<link rel="stylesheet" href="{{ "/css/plyr.css" | relURL }}"/>
-<link rel="stylesheet" href="{{ "/css/flag-icon.min.css" | relURL }}"/>
+<!--================= custom style overrides =========================-->
+{{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "")) }}
+{{ $sass := resources.Get "/scss/main.scss" }}
+{{ $style := $sass | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $style.Permalink }}"/>
 
 <!--=================== cdn ==============================-->
 <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">

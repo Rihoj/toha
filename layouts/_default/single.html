@@ -4,8 +4,10 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
 />
-<link rel="stylesheet" href="{{ "/css/layouts/single.css" | relURL }}"/>
-<link rel="stylesheet" href="{{ "/css/navigators/sidebar.css" | relURL }}">
+{{ $options := (dict "targetPath" "single.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "")) }}
+{{ $sass := resources.Get "/scss/single/main.scss" }}
+{{ $style := $sass | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $style.Permalink }}"/>
 <!--================= custom style overrides =========================-->
 <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}"/>
 

@@ -1,0 +1,38 @@
+.btn-dark {
+	background-color: $Paragraph;
+	border-color: $Paragraph;
+	color: $Dirty-Snow;
+	transition: all 0.3s ease-out;
+	&:hover {
+		background-color: #248aaa;
+		border-color: #248aaa;
+		transition: all 0.3s ease-out;
+	}
+	&:focus {
+		background-color: #248aaa;
+		border-color: #248aaa;
+		transition: all 0.3s ease-out;
+	}
+}
+.btn-outline-info {
+	color: #2098d1 !important;
+	border-color: #2098d1 !important;
+	&:hover {
+		background-color: #2098d1 !important;
+		color: $Dirty-Snow !important;
+	}
+}
+.btn-info {
+	background-color: #248aaa !important;
+	color: $Dirty-Snow !important;
+	&:hover {
+		background-color: #2098d1 !important;
+		color: $Dirty-Snow !important;
+	}
+}
+.btn-link {
+	color: #248aaa;
+	&:hover {
+		color: #207089;
+	}
+}
