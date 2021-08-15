@@ -1,0 +1,156 @@
+/*============ Education Alter Template =============*/
+/* ============= Device specific fixes ======= */
+/* Large screens such as TV */
+/* Extra large devices (large desktops, 1200px and up) */
+/* IPad Pro */
+/*  Large devices (desktops, 992px and up) */
+/* Medium devices (tablets, 768px and up) */
+/* Small devices (landscape phones, 576px and up) */
+/* iPhoneX, iPhone 6,7,8 */
+/* Galaxy S5, Moto G4 */
+/* iPhone 5 or before */
+.education-section {
+	.education-info-table {
+		width: 100%;
+		border: none;
+		tr {
+			&:hover {
+				background: none;
+			}
+			border: none;
+			padding: 0;
+			&:first-child {
+				.hline {
+					height: 65%;
+					top: auto;
+				}
+			}
+			&:last-child {
+				.hline {
+					height: 50%;
+				}
+			}
+		}
+		th {
+			border: none;
+			padding: 0;
+		}
+		td {
+			border: none;
+			padding: 0;
+		}
+	}
+	.timeframe {
+		color: #8392a5;
+		text-align: right;
+	}
+	.icon {
+		width: 2rem;
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
+		.hline {
+			position: absolute;
+			left: 1rem;
+			top: 0;
+			background-color: #248aaa;
+			height: 100%;
+			width: 2px;
+		}
+	}
+	.icon-holder {
+		background-color: #248aaa;
+		border-radius: 50%;
+		height: 2rem;
+		width: 2rem;
+		padding: 0.2rem;
+		text-align: center;
+		color: #e5e9f2;
+		position: relative;
+	}
+	.line {
+		width: 5%;
+		padding-left: 0;
+		padding-right: 0;
+		div {
+			height: 2px;
+			margin-right: -1px;
+			background-color: #248aaa;
+		}
+	}
+	.degree-info {
+		padding: 1rem;
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+		border-left: 2px solid #248aaa;
+		border-top: 1px solid #c0ccda;
+		border-bottom: 1px solid #c0ccda;
+		border-right: 1px solid #c0ccda;
+		border-radius: 5px;
+		h5 {
+			margin-bottom: 0.3rem;
+		}
+	}
+	.taken-courses {
+		table {
+			margin-left: 1rem;
+			width: 100%;
+			transition: all 0.3s ease-out;
+			background: none;
+			border: none;
+		}
+		tr {
+			height: auto !important;
+			background: none;
+			border: none;
+			color: #212529;
+		}
+		td {
+			background: none;
+			border: none;
+			color: #212529;
+		}
+		th {
+			background: none;
+			border: none;
+			color: #212529;
+		}
+		.hidden-course {
+			display: none;
+			transition: all 1s ease-out;
+		}
+		ul {
+			margin-bottom: 0;
+		}
+	}
+}
+.education-alt {
+	.degree-info {
+		border-right: 2px solid #248aaa;
+	}
+}
+@media (max-width: 1024px) {
+	.education-section {
+		.container {
+			padding-left: 0;
+		}
+	}
+}
+@media only screen and (max-width: 576px) {
+	.education-section {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		.container {
+			padding-right: 0;
+		}
+		.icon {
+			display: none;
+		}
+		.line {
+			display: none;
+		}
+		.timeframe {
+			text-align: left;
+		}
+	}
+}

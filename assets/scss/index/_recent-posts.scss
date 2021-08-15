@@ -1,0 +1,54 @@
+/* ============= Device specific fixes ======= */
+/* Large screens such as TV */
+/* Extra large devices (large desktops, 1200px and up) */
+/* IPad Pro */
+/*  Large devices (desktops, 992px and up) */
+/* Medium devices (tablets, 768px and up) */
+/* Small devices (landscape phones, 576px and up) */
+/* iPhoneX, iPhone 6,7,8 */
+/* Galaxy S5, Moto G4 */
+/* iPhone 5 or before */
+.recent-posts-section {
+	.container {
+		padding-top: 1rem;
+	}
+	.card {
+		.card-footer {
+			span {
+				font-size: 10pt;
+				color: #6c757d !important;
+				padding-top: 5px;
+			}
+			background: #fff;
+			margin-top: auto;
+		}
+	}
+	.post-card-link {
+		text-decoration: none;
+	}
+}
+.post-summary {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	max-height: 144px;
+	-webkit-line-clamp: 5;
+	-webkit-box-orient: vertical;
+}
+@media only screen and (max-width: 768px) {
+	.recent-posts-section {
+		.container {
+			max-width: 100%;
+		}
+		.post-card {
+			width: 50%;
+		}
+	}
+}
+@media only screen and (max-width: 576px) {
+	.recent-posts-section {
+		.post-card {
+			width: 100%;
+		}
+	}
+}

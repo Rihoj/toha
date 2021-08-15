@@ -1,0 +1,61 @@
+/* ============= Device specific fixes ======= */
+/* Large screens such as TV */
+/* Extra large devices (large desktops, 1200px and up) */
+/* IPad Pro */
+/*  Large devices (desktops, 992px and up) */
+/* Medium devices (tablets, 768px and up) */
+/* Small devices (landscape phones, 576px and up) */
+/* iPhoneX, iPhone 6,7,8 */
+/* Galaxy S5, Moto G4 */
+/* iPhone 5 or before */
+.accomplishments-section {
+	.card {
+		background: #fff;
+		border-top: 2px solid #248aaa;
+		.card-header {
+			background: none;
+			border: none;
+			.sub-title {
+				color: #8392a5;
+				margin-top: 0.4rem;
+			}
+		}
+		.sub-title {
+			&:nth-child(2) {
+				float: none !important;
+			}
+		}
+		.card-body {
+			padding: 0;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+		.card-footer {
+			background: #fff;
+			border: none;
+			padding: 0;
+			padding-left: 0.7rem;
+			padding-bottom: 0.3rem;
+		}
+	}
+}
+@media (max-width: 1024px) {
+	.accomplishments-section {
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+		padding: 0;
+		padding-left: 0.2rem;
+		padding-right: 0.2rem;
+		.container {
+			max-width: 100%;
+		}
+	}
+}
+@media only screen and (max-width: 576px) {
+	.accomplishments-section {
+		flex: 100%;
+		max-width: 100%;
+		margin-top: 2rem;
+	}
+}

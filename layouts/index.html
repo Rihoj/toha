@@ -10,25 +10,22 @@
       {{ end }}
     {{ end }}
     <meta name="description" content="{{ $siteDescription }}" />
-    
+
     <!-- import common headers -->
     {{- partial "header.html" . -}}
     {{- partial "opengraph.html" . -}}
 
     <!-- import index page specific headers -->
-    <link rel="stylesheet" href="{{ "/css/sections/home.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "/css/sections/about.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "/css/sections/skills.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "/css/sections/experiences.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "/css/sections/education.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "/css/sections/projects.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "/css/sections/recent-posts.css" | relURL }}"/>
+    {{ $options := (dict "targetPath" "index.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "")) }}
+    {{ $sass := resources.Get "/scss/index/main.scss" }}
+    {{ $style := $sass | resources.ToCSS $options }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}"/>
     <link rel="stylesheet" href="{{ "/css/sections/achievements.css" | relURL }}"/>
     <link rel="stylesheet" href="{{ "/css/sections/accomplishments.css" | relURL }}"/>
 
     <!--================= custom style overrides =========================-->
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}"/>
-    
+
     <!-- Add Google Analytics if enabled in configuration -->
     {{ if site.GoogleAnalytics }}
         <!-- Google Analytics v3  ID -->

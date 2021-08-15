@@ -1,0 +1,142 @@
+/* ============= Device specific fixes ======= */
+/* Large screens such as TV */
+/* Extra large devices (large desktops, 1200px and up) */
+/* IPad Pro */
+/*  Large devices (desktops, 992px and up) */
+/* Medium devices (tablets, 768px and up) */
+/* Small devices (landscape phones, 576px and up) */
+/* iPhoneX, iPhone 6,7,8 */
+/* Galaxy S5, Moto G4 */
+/* iPhone 5 or before */
+.achievements-section {
+	.container {
+		padding-top: 0.5rem;
+	}
+}
+#gallery {
+	.achievement-entry {
+		cursor: pointer;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-left: 7px;
+		margin-right: 7px;
+		z-index: 1;
+		background-color: #e5e9f2;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.3s ease-out;
+		&:hover {
+			cursor: pointer;
+			z-index: 1;
+			transform: scale(1.1);
+			transition: all 0.3s ease-out;
+			z-index: 20000;
+			i {
+				opacity: 1;
+				font-size: 1rem;
+				transition: all 0.3s ease-out;
+			}
+			.title {
+				opacity: 1;
+				bottom: 0px;
+				transition: bottom 0.3s ease-out;
+			}
+		}
+		.title {
+			color: #e5e9f2;
+			background-color: rgba(0, 0, 0, 0.7);
+			opacity: 0;
+			padding: 5px;
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+			margin-bottom: 0px;
+			bottom: -5px;
+		}
+	}
+	.achievement-details {
+		cursor: pointer;
+		z-index: 1;
+		opacity: 1 !important;
+		transition: none !important;
+		transform: none !important;
+		height: 75vh !important;
+	}
+	.img-type-1 {
+		height: 300px;
+		i {
+			margin-top: 135px;
+		}
+	}
+	.img-type-2 {
+		height: 146px;
+		margin-bottom: 8px;
+		i {
+			margin-top: 50px;
+		}
+	}
+	i {
+		color: #8392a5;
+		background-color: rgba(0, 0, 0, 0.7);
+		padding: 10px;
+		font-size: 0rem;
+		opacity: 0;
+	}
+	.achievement-details.img-type-1 {
+		i {
+			margin-top: 0px !important;
+			transition: none !important;
+			float: right;
+		}
+	}
+	.caption {
+		background-color: rgba(0, 0, 0, 0.7);
+		bottom: 1rem;
+		left: 1rem;
+		color: #e5e9f2;
+		padding: 15px;
+		position: absolute;
+		transition: all 0.3s ease-out;
+		h4 {
+			color: #e5e9f2;
+		}
+		p {
+			font-size: 16px;
+			font-weight: 300;
+			color: #e5e9f2;
+		}
+	}
+}
+.achievement-details.img-type-2 {
+	i {
+		margin-top: 0px !important;
+		transition: none !important;
+		float: right;
+	}
+}
+.hidden {
+	display: none !important;
+}
+@media only screen and (max-width: 768px) {
+	.achievements-section {
+		.container {
+			max-width: 100%;
+		}
+		.col-md-6 {
+			flex: 50%;
+			width: 50%;
+		}
+	}
+}
+@media only screen and (max-width: 576px) {
+	#gallery {
+		.achievement-entry {
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+	}
+}

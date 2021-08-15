@@ -1,0 +1,127 @@
+/* ============= Device specific fixes ======= */
+/* Large screens such as TV */
+/* Extra large devices (large desktops, 1200px and up) */
+/* IPad Pro */
+/*  Large devices (desktops, 992px and up) */
+/* Medium devices (tablets, 768px and up) */
+/* Small devices (landscape phones, 576px and up) */
+/* iPhoneX, iPhone 6,7,8 */
+/* Galaxy S5, Moto G4 */
+/* iPhone 5 or before */
+.experiences-section {
+	padding-bottom: 1rem;
+	.timeline {
+		margin-top: 1.5rem !important;
+	}
+	ul {
+		padding-left: 1rem;
+		>li {
+			margin-left: 0;
+			color: #3c4858;
+		}
+	}
+	.designation {
+		font-weight: 600;
+	}
+}
+.circle {
+	padding: 13px 20px;
+	border-radius: 50%;
+	background-color: #248aaa;
+	color: #f9fafc;
+	max-height: 50px;
+	z-index: 2;
+}
+.timeline {
+	.vertical-line {
+		align-self: stretch;
+		&::after {
+			content: "";
+			position: absolute;
+			border-left: 3px solid #248aaa;
+			z-index: 1;
+			height: 100%;
+			left: 50%;
+		}
+	}
+	.horizontal-line {
+		div {
+			padding: 0;
+			height: 40px;
+		}
+		hr {
+			border-top: 3px solid #248aaa;
+			margin: 0;
+			top: 17px;
+			position: relative;
+		}
+		.timeline-side-div {
+			display: flex;
+			overflow: hidden;
+		}
+		.corner {
+			border: 3px solid #248aaa;
+			width: 100%;
+			position: relative;
+			border-radius: 15px;
+		}
+	}
+}
+.vertical-line-left-adjustment {
+	&::after {
+		left: calc(50% - 3px) !important;
+	}
+}
+.top-left {
+	left: -50%;
+	top: -50%;
+}
+.top-right {
+	left: 50%;
+	top: -50%;
+}
+.bottom-left {
+	left: -50%;
+	top: calc(50% - 3px);
+}
+.bottom-right {
+	left: 50%;
+	top: calc(50% - 3px);
+}
+@media only screen and (max-width: 768px) {
+	.experiences-section {
+		.container {
+			max-width: 100%;
+		}
+	}
+}
+@media only screen and (max-width: 375px) {
+	.top-left {
+		left: -52%;
+		top: -50%;
+	}
+	.top-right {
+		left: 52%;
+		top: -50%;
+	}
+}
+@media only screen and (max-width: 360px) {
+	.top-left {
+		left: -56%;
+		top: -50%;
+	}
+	.top-right {
+		left: 56%;
+		top: -50%;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.top-left {
+		left: -64%;
+		top: -50%;
+	}
+	.top-right {
+		left: 64%;
+		top: -50%;
+	}
+}
