@@ -20,8 +20,6 @@
     {{ $sass := resources.Get "/scss/index/main.scss" }}
     {{ $style := $sass | resources.ToCSS $options }}
     <link rel="stylesheet" href="{{ $style.Permalink }}"/>
-    <link rel="stylesheet" href="{{ "/css/sections/achievements.css" | relURL }}"/>
-    <link rel="stylesheet" href="{{ "/css/sections/accomplishments.css" | relURL }}"/>
 
     <!--================= custom style overrides =========================-->
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}"/>

@@ -37,7 +37,7 @@
 
   {{ $disclaimer := "" }}
   {{ $siteConfig := (index site.Data site.Language.Lang).site }}
-  {{ if $siteConfig.disclaimer }} 
+  {{ if $siteConfig.disclaimer }}
     {{ $disclaimer = $siteConfig.disclaimer }}
   {{ end }}
 

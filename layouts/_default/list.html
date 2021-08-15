@@ -1,6 +1,8 @@
 {{ define "header" }}
-    <link rel="stylesheet" href="{{ "/css/layouts/list.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "/css/navigators/sidebar.css" | relURL}}">
+    {{ $options := (dict "targetPath" "common.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "")) }}
+    {{ $sass := resources.Get "/scss/common/main.scss" }}
+    {{ $style := $sass | resources.ToCSS $options }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}"/>
     <!--================= custom style overrides =========================-->
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}"/>
 
